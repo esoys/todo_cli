@@ -3,6 +3,7 @@
 
 struct Todo {
   char *task;
+  int id;
   bool done;
 } typedef Todo;
 
@@ -12,6 +13,7 @@ struct Todo_List {
   Todo todos[];
 } typedef Todo_List;
 
+Todo create_todo(char *, int);
 Todo_List create_todo_list(Todo[], int);
 
 #endif
