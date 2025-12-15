@@ -2,18 +2,19 @@
 #define TODO_H
 
 struct Todo {
-  char *task;
-  int id;
-  bool done;
-} typedef Todo;
+    char *task;
+    char *title;
+    int id;
+    bool done;
+} typedef todo_t;
 
 
 struct Todo_List {
-  int len;
-  Todo todos[];
-} typedef Todo_List;
+    int len;
+    todo_t todos[];
+} typedef todo_list_t;
 
-Todo create_todo(char *, int);
-Todo_List create_todo_list(Todo[], int);
+todo_t create_todo(char *, char *, int);
+todo_list_t create_todo_list(todo_t[], int);
 
 #endif
